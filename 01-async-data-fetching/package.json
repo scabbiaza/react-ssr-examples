@@ -1,0 +1,45 @@
+{
+  "name": "react-ssr-async-data-fetching",
+  "version": "0.1.0",
+  "author": "scabbiaza",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "baobab": "^2.5.0",
+    "baobab-react": "^3.0.0",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "npm": "^5.5.1",
+    "ramda": "^0.25.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-frontload": "git+https://github.com/scabbiaza/react-frontload.git#ff06389fe8c4c6d02d569443e10ec1dbb87d518e",
+    "webpack": "^3.7.1"
+  },
+  "scripts": {
+    "start-server": "nodemon ./src/server.js --exec babel-node",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ]
+          }
+        }
+      ],
+      "react"
+    ]
+  }
+}
